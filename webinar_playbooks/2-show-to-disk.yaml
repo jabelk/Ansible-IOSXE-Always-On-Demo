@@ -14,5 +14,5 @@
 
       - name: Show Commands to Disk
         ansible.builtin.template:
-          src: "templates/show_command.j2"
+          src: "../templates/show_command.j2"
           dest: "show_outputs/{{ inventory_hostname }}_show_cmds.txt"
