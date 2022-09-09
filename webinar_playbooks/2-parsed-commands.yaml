@@ -19,9 +19,3 @@
             name: ansible.netcommon.pyats
           set_fact: interfaces
 
-      - name: "Run command and parse with native"
-        ansible.utils.cli_parse:
-          command: show ip interface brief
-          parser:
-            name: ansible.netcommon.native
-          set_fact: interfaces
