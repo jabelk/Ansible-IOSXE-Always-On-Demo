@@ -17,4 +17,4 @@ pip install -r requirements.txt
 
 #CREATE ANSIBLE DIRECTORY AND THEN CLONE REPO
 mkdir Ansible-IOSXE-Always-On-Demo
-git clone https://github.com/barweiss45/Ansible-IOSXE-Always-On-Demo.git Ansible-IOSXE-Always-On-Demo
+git clone https://github.com/jabelk/Ansible-IOSXE-Always-On-Demo Ansible-IOSXE-Always-On-Demo

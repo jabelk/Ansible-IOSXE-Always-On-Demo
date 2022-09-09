@@ -9,9 +9,9 @@
       ios_command:
         commands: "show version"
 
-    # - name: "TASK 2 - SEND MULTIPLE ENABLE LEVEL SHOW COMMAND"
-    #   ios_command:
-    #     commands:
-    #     - "show ip interface brief"
-    #     - "show interfaces"
-    #     - "dir"
+    - name: "TASK 2 - SEND MULTIPLE ENABLE LEVEL SHOW COMMAND"
+      ios_command:
+        commands:
+        - "show ip interface brief"
+        - "show interfaces"
+        - "dir"
