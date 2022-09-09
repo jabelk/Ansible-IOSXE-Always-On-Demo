@@ -1,0 +1,13 @@
+---
+  - name: PLAY 1 - SENDING SHOW COMMANDS TO IOS DEVICES
+    hosts: "iosxe"
+    connection: network_cli
+    gather_facts: no
+    tasks:
+
+      - name: "Run command and parse with ntc_templates"
+        ansible.utils.cli_parse:
+          command: show interface
+          parser:
+            name: ansible.netcommon.ntc_templates
+          set_fact: interfaces
