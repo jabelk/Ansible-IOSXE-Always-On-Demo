@@ -23,11 +23,11 @@
     tasks:
 
     - name: "TASK 1 - SEND A SINGLE ENABLE LEVEL SHOW COMMAND"
-      cisco.ios.nxos_command:
+      cisco.nxos.nxos_command:
         commands: "show version"
 
     - name: "TASK 2 - SEND MULTIPLE ENABLE LEVEL SHOW COMMAND"
-      cisco.ios.nxos_command:
+      cisco.nxos.nxos_command:
         commands:
         - "show ip interface brief"
         - "show interfaces"
