@@ -1,0 +1,22 @@
+
+---
+  - name: PLAY 1 - FACTS
+    hosts: "iosxe"
+    connection: network_cli
+    gather_facts: no
+    tasks:
+        - name: First Task - Configure CDP and LLDP 
+          ios_config:
+            lines:
+                - cdp run
+                - lldp run
+
+        - name: Second Task - Configure Interface 
+          ios_config:
+            lines:
+                - "description {{ inventory_hostname }}"
+                - ip address 172.31.1.1 255.255.255.0
+            parents: interface Loopback1337
+
+
+

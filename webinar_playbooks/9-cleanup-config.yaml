@@ -1,0 +1,18 @@
+
+---
+  - name: PLAY 1 - FACTS
+    hosts: "iosxe"
+    connection: network_cli
+    gather_facts: no
+    tasks:
+        - name: First Task - Configure CDP and LLDP 
+          ios_config:
+            lines:
+                - no cdp run
+                - no lldp run
+
+        - name: Second Task - Configure Interface 
+          ios_config:
+            lines:
+                - "no interface Loopback1337"
+
