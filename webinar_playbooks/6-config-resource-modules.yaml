@@ -6,16 +6,7 @@
     gather_facts: no
     tasks:
 
-      - name: Merge provided configuration with device configuration
-        cisco.ios.ios_interfaces:
+      - name: Gather listed vlans with provided configurations
+        cisco.ios.ios_vlans:
           config:
-          - name: Loopback140
-            description: Configured and Merged by Ansible Network
-            enabled: true
-          - name: Loopback145
-            description: Configured and Merged by Ansible Network
-            mtu: 2800
-            enabled: false
-            speed: 100
-            duplex: full
-          state: merged
+          state: gathered
