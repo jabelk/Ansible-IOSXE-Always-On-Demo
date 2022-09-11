@@ -17,4 +17,5 @@
                 - "no interface Loopback1337"
                 - "no interface Loopback124"
                 - "no interface Loopback125"
+                - "no ip access-list extended test"
 
