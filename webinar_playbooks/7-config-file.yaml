@@ -8,9 +8,4 @@
         - name: render a Jinja2 template onto an IOS device
           ios_config:
             backup: yes
-            src: ios_template.j2
-
-        - name: Render Config to Disk
-          template:
-            src: ios_template.j2
-            dest: configs/ios_config.txt
+            src: "../templates/simple-acl.j2"
