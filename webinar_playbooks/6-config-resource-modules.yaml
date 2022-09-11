@@ -6,7 +6,14 @@
     gather_facts: no
     tasks:
 
-      - name: Gather listed vlans with provided configurations
-        cisco.ios.ios_vlans:
+      - name: Merge provided configuration with device configuration
+        cisco.ios.ios_l3_interfaces:
           config:
-          state: gathered
+          - name: Loopback124
+            ipv4:
+            - address: 192.168.0.1/24
+              secondary: true
+          - name: Loopback125
+            ipv4:
+            - address: 192.168.0.2/24
+          state: merged
