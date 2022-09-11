@@ -11,10 +11,10 @@
                 - no cdp run
                 - no lldp run
 
-        - name: "Purge given interfaces (Note: This will delete the interface itself)"
-          cisco.ios.ios_interfaces:
-            config:
-            - name: Loopback1337
-            - name: Loopback124
-            - name: Loopback125
-            state: purged
+        - name: Second Task - Configure Interface 
+          ios_config:
+            lines:
+                - "no interface Loopback1337"
+                - "no interface Loopback124"
+                - "no interface Loopback125"
+
