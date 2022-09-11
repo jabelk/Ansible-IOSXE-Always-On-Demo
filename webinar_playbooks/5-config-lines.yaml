@@ -14,8 +14,8 @@
         - name: Second Task - Configure Interface 
           ios_config:
             lines:
-                - "description {{ inventory_hostname }}"
-                - ip address 172.31.1.1 255.255.255.0
+                - "description configured by Ansible"
+                - "ip address {{ loopback_ip }}"
             parents: interface Loopback1337
 
 
